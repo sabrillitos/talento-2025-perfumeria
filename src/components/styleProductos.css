@@ -1,0 +1,107 @@
+.card{
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px#ffffff63;
+    padding: 16px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover{
+    box-shadow: 0 0 10px#fff;
+}
+
+.imgContainer{
+    width: 100%;
+    height: 420px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px; 
+}
+
+.imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nombre{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.precio{
+    font-size: 19px;
+    font-weight: 700;
+    color: #d5d2d2;
+    margin-bottom: 4px;
+}
+.stock{
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 12px;
+}
+
+.cantidadContainer{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.quantityButton{
+    background-color: #212020;
+    border: 1px solid #ffffff63;
+    box-shadow: 0 0 4px#ffffff63;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.quantityButton:hover{
+    background-color: #1b448a;
+    border: 1px solid #fff;
+}
+
+.agregarBtn{
+    background-color: #222121;
+    box-shadow: 0 0 2px#fff;
+}
+
+.quantityNumber{
+    color: rgb(239, 235, 235);
+    font-weight: 400;
+}
+
+.productsContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.verBtn{
+    margin-top: 25px;
+    padding: 6px;
+    text-decoration: none;
+    border-bottom: solid 1px #8888a5;
+    border-radius: 6px;
+    color:#939ba9;
+    transition: background-color 0.3s;
+}
+
+.verBtn:hover{
+    background-color: #244680;
+}

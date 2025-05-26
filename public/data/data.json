@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "nombre": "Velvet Shadow",
+        "precio": 12.5,
+        "stock": 14,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194642/velvet_shadow_wghwju.png",
+        "categoria": "mysterious",
+        "detalle": "Una fusión envolvente de incienso ahumado y sándalo oscuro que evoca la sensación de caminar por un bosque encantado al anochecer.",
+        "ingredientes": "Esencia de sándalo, resina de incienso, pimienta negra, almizcle oscuro y extracto de cedro."
+    },
+    {
+        "id": 2,
+        "nombre": "Nocturne Desire",
+        "precio": 14,
+        "stock": 10,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194638/nocturne_desire_guvh0v.jpg",
+        "categoria": "sexy",
+        "detalle": "Una mezcla sensual de frutos rojos y vainilla negra que despierta los sentidos y deja una estela irresistible.",
+        "ingredientes": "Vainilla negra, frambuesa madura, ámbar, jazmín de noche y esencia de cuero."
+    },
+    {
+        "id": 3,
+        "nombre": "Black Orchid Kiss",
+        "precio": 13.8,
+        "stock": 12,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194638/black_orchid_kiss_ixzxe5.png",
+        "categoria": "mysterious",
+        "detalle": "Un beso oscuro y floral que combina la profundidad de la orquídea negra con toques de vainilla oriental.",
+        "ingredientes": "Orquídea negra, vainilla oriental, haba tonka, almizcle blanco y pachulí."
+    },
+    {
+        "id": 4,
+        "nombre": "Crimson Touch",
+        "precio": 11,
+        "stock": 20,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194635/crimson_touch_fnthlm.png",
+        "categoria": "sexy",
+        "detalle": "Una caricia escarlata que combina cereza negra, rosa turca y un fondo cálido de especias.",
+        "ingredientes": "Cereza negra, rosa turca, canela, nuez moscada y almizcle cálido."
+    },
+    {
+        "id": 5,
+        "nombre": "Moonlit Spell",
+        "precio": 15,
+        "stock": 8,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194631/moonlit_spell_mewwn3.jpg",
+        "categoria": "mysterious",
+        "detalle": "Un hechizo a la luz de la luna con notas etéreas de lavanda nocturna y néctar de higo.",
+        "ingredientes": "Lavanda azul, néctar de higo, incienso suave, lirio silvestre y almizcle de luna."
+    },
+    {
+        "id": 6,
+        "nombre": "Wild Seduction",
+        "precio": 12.2,
+        "stock": 18,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194643/wild_seduction_ziy6pq.png",
+        "categoria": "sexy",
+        "detalle": "Una seducción salvaje con notas de frutos exóticos y maderas cremosas que evocan una jungla prohibida.",
+        "ingredientes": "Mango maduro, flor de tiaré, madera de cachemira, jazmín y vainilla cálida."
+    },
+    {
+        "id": 7,
+        "nombre": "Eclipse Rose",
+        "precio": 13,
+        "stock": 16,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194637/eclipse_rose_kjqqqz.png",
+        "categoria": "mysterious",
+        "detalle": "Un eclipse de rosa negra con un corazón de mirra y fondo de madera húmeda, perfecto para almas nocturnas.",
+        "ingredientes": "Rosa negra, mirra, hoja de violeta, sándalo y almizcle mineral."
+    },
+    {
+        "id": 8,
+        "nombre": "Sinful Amber",
+        "precio": 11.5,
+        "stock": 22,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194639/sinful_amber_pdit0c.png",
+        "categoria": "sexy",
+        "detalle": "Ámbar tentador con toques de vainilla quemada y caramelo oscuro, ideal para noches de placer prohibido.",
+        "ingredientes": "Ámbar dorado, vainilla tostada, caramelo oscuro, praliné y esencia de cacao."
+    },
+    {
+        "id": 9,
+        "nombre": "Phantom Bloom",
+        "precio": 14.8,
+        "stock": 11,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194641/phantom_bloom_yahf5x.png",
+        "categoria": "mysterious",
+        "detalle": "Una floración fantasma que aparece en la niebla con notas de flor de loto, menta fría y almizcle empolvado.",
+        "ingredientes": "Flor de loto, menta silvestre, almizcle empolvado, té blanco y ámbar gris."
+    },
+    {
+        "id": 10,
+        "nombre": "Dark Temptation",
+        "precio": 13.6,
+        "stock": 9,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748219675/dark_temptation_ex3gs1.png",
+        "categoria": "sexy",
+        "detalle": "Tentación oscura con cacao especiado, frutas del bosque y una base de oud aterciopelado.",
+        "ingredientes": "Cacao oscuro, bayas silvestres, oud suave, flor de naranjo y clavo."
+    },
+    {
+        "id": 11,
+        "nombre": "Golden Whisper",
+        "precio": 16,
+        "stock": 7,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748219829/golden_whisper_or5x1j.png",
+        "categoria": "elegant",
+        "detalle": "Un susurro dorado de jazmín imperial y pera blanca que deja un halo luminoso y femenino.",
+        "ingredientes": "Jazmín imperial, pera blanca, almizcle dorado, cedro blanco y flores de azahar."
+    },
+    {
+        "id": 12,
+        "nombre": "Royal Lace",
+        "precio": 17.5,
+        "stock": 5,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194638/royal_lace_t8axwz.jpg",
+        "categoria": "elegant",
+        "detalle": "Una composición regia de lirio blanco, mandarina cristalina y almizcle aterciopelado.",
+        "ingredientes": "Lirio blanco, mandarina, almizcle blanco, violeta francesa y vainilla clara."
+    },
+    {
+        "id": 13,
+        "nombre": "Pearl Garden",
+        "precio": 14.2,
+        "stock": 13,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194637/pearl_garden_rkrmi9.jpg",
+        "categoria": "elegant",
+        "detalle": "Un jardín perlado con flores de magnolia, rocío matinal y una brisa suave de peonías.",
+        "ingredientes": "Magnolia, rocío fresco, peonía rosa, almizcle blanco y ámbar cristalino."
+    },
+    {
+        "id": 14,
+        "nombre": "Iris Imperial",
+        "precio": 15.9,
+        "stock": 10,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194633/iris_imperial_pqi5yf.jpg",
+        "categoria": "elegant",
+        "detalle": "Una joya olfativa con iris empolvado, bergamota italiana y un toque de vetiver elegante.",
+        "ingredientes": "Iris empolvado, bergamota, vetiver, vainilla clara y flor de naranjo."
+    },
+    {
+        "id": 15,
+        "nombre": "Silken Veil",
+        "precio": 13.3,
+        "stock": 17,
+        "imagen": "https://res.cloudinary.com/df93m2opb/image/upload/v1748194638/silken_veil_ik1wck.jpg",
+        "categoria": "elegant",
+        "detalle": "Un velo de seda que abraza la piel con gardenia blanca, almizcle suave y un toque de melocotón aterciopelado.",
+        "ingredientes": "Gardenia blanca, almizcle suave, melocotón aterciopelado, vainilla blanca y lirio."
+    }
+]

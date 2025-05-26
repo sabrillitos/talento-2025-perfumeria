@@ -1,0 +1,67 @@
+.detalles-container {
+    padding: 40px;
+    color: #fff;
+    background-color: #0e1a2b;
+    min-height: 100vh;
+}
+
+.detalles-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.detalles-imagen {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ffffff63;
+}
+
+.detalles-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+}
+
+.detalles-cuadro {
+    background-color: #1a2a40;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #114477;
+}
+
+.detalles-cuadro h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #a3cfff;
+}
+
+.detalles-cuadro p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.volver-btn {
+    align-self: flex-start;
+    margin-top: 20px;
+    background-color: #2299ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.volver-btn:hover {
+    background-color: #1a7ed9;
+}
+
