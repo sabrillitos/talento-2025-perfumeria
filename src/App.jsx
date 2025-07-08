@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import './App.css' // VER SI LO BORRO
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Home from "./pages/Home"
 import AcercaDe from "./pages/AcercaDe"
@@ -19,18 +19,17 @@ function App() {
 
   return (
     <>
-      <Router>
         <Routes>
 
-          <Route path="/" element={ <Home borrarProducto={handleDeleteFromCart} agregarCarrito={handleAddToCart} cart={cart} productos={productos} cargando={cargando}/> }/>
+          <Route path="/" element={ <Home /> }/>
 
-          <Route path="/acercade" element={ <AcercaDe borrarProducto={handleDeleteFromCart} cart={cart}/> }/>
+          <Route path="/acercade" element={ <AcercaDe /> }/>
 
-          <Route path="/productos" element={ <GaleriaDeProductos borrarProducto={handleDeleteFromCart} agregarCarrito={handleAddToCart} cart={cart} productos={productos} cargando={cargando}/> }/>
+          <Route path="/productos" element={ <GaleriaDeProductos /> }/>
 
-          <Route path='/productos/:id' element={ <DetallesProducto productos={productos}/> }/>
+          <Route path='/productos/:id' element={ <DetallesProducto /> }/>
 
-          <Route path="/contacto" element={ <Contacto borrarProducto={handleDeleteFromCart} cart={cart}/> }/>
+          <Route path="/contacto" element={ <Contacto /> }/>
 
           { <Route path='/admin' element={ <RutaProtegida isAuthenticated={isAuthenticated}> <Admin/> </RutaProtegida> }/> }
 
@@ -39,7 +38,6 @@ function App() {
           <Route path="*" element={ <NotFound/> }/>
 
         </Routes>
-      </Router>
     </>
   )
 }

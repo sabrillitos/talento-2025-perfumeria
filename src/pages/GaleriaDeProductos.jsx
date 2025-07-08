@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Header from '../components/estaticos/Header'
 import Footer from '../components/estaticos/Footer'
 import ProductList from '../components/ProductList'
 import loading from '../assets/loading_perfumes.gif'
+import { CartContext } from '../context/CartContext'
 
-const GaleriaDeProductos = ({borrarProducto, agregarCarrito, cart, productos, cargando}) => {
+const GaleriaDeProductos = () => {
+
+    const {cargando} = useContext(CartContext)
+
     return (
         <>
-        <Header borrarProducto={borrarProducto} cartItems={cart}/>
+        <Header />
             <h1 style={{textAlign:'center'}}>FUTURAS PROMOCIONES PRONTO...</h1>
     {
     cargando
@@ -16,7 +20,7 @@ const GaleriaDeProductos = ({borrarProducto, agregarCarrito, cart, productos, ca
             <img src={loading} alt='loading' />
             </div>
         )
-        : <ProductList agregarCarrito={agregarCarrito} productos={productos}/>
+        : <ProductList  />
     }
 
         <Footer/>

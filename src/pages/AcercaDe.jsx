@@ -2,10 +2,10 @@ import React from 'react'
 import Header from '../components/estaticos/Header'
 import Footer from '../components/estaticos/Footer'
 
-const AcercaDe = ({cart, borrarProducto}) => {
+const AcercaDe = () => {
     return (
         <>
-        <Header borrarProducto={borrarProducto} cartItems={cart}/>
+        <Header />
             <h1>Un poco de nuestra historia</h1>
             <p>
             En L'Essence Noire, creemos que un perfume es más que una fragancia: es una declaración silenciosa, una presencia inolvidable y una huella que trasciende el tiempo.

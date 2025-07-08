@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './styleCart.css'
+import { CartContext } from '../context/CartContext'
 
-const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
+const Cart = ({ isOpen, onClose }) => {
+
+    const {cart, handleDeleteFromCart} = useContext(CartContext)
+
     return (
         <div className={`cart-drawer ${isOpen ? 'open' : ''}`}>
 
@@ -11,11 +15,11 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
             </div>
 
             <div className='cart-content'>
-                {cartItems.length === 0 ? (
+                {cart.length === 0 ? (
                 <p style={{ color: 'red', fontWeight: 'bold' }}>Su carrito está vacío</p>
                 ) : (
                 <div className='cart-items'>
-                {cartItems.map((item) => (
+                {cart.map((item) => (
                     <div key={item.id} className='cart-card'>
                         <img src={item.imagen} alt={item.nombre} className='cart-img' />
                         <div className='cart-info'>
@@ -24,7 +28,7 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
                             ${item.precio.toFixed(2)} x {item.quantity} = ${(item.precio * item.quantity).toFixed(2)}
                             </p>
                     </div>
-                    <button onClick={() => borrarProducto(item)} className='deleteBtn'>
+                    <button onClick={() => handleDeleteFromCart(item)} className='deleteBtn'>
                         <i className='fa-solid fa-trash'></i>
                     </button>
                     </div>
@@ -33,9 +37,9 @@ const Cart = ({ cartItems, isOpen, onClose, borrarProducto }) => {
             )}
             </div>
 
-            {cartItems.length > 0 && (
+            {cart.length > 0 && (
                 <div className='cart-footer'>
-                <p>Total: ${cartItems
+                <p>Total: ${cart
                     .reduce((acc, item) => acc + item.precio * item.quantity, 0)
                     .toFixed(2)}
                 </p>

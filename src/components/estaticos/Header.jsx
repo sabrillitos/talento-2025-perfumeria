@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './styleEstatico.css'
 import Cart from '../Cart'
+import { CartContext } from '../../context/CartContext'
 
 
-const Header = ({cartItems, borrarProducto}) => {
+const Header = () => {
 
 const [isCartOpen, setCartOpen] = useState(false)
 
@@ -18,7 +19,7 @@ const [isCartOpen, setCartOpen] = useState(false)
                     <li><Link to='/contacto' className='link'>Contacto <i class="fa-solid fa-envelope"></i></Link></li>
                     <li className='cartnav'>
                         <button className='btnCart' onClick={()=> setCartOpen(true)}><i className="fa-solid fa-cart-shopping"></i></button>
-                        <Cart borrarProducto={borrarProducto} cartItems={cartItems} isOpen={isCartOpen} onClose={()=>
+                        <Cart isOpen={isCartOpen} onClose={()=>
                             setCartOpen(false)}/>
                     </li>
                 </ul>
