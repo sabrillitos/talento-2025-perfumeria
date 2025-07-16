@@ -93,10 +93,12 @@ const Admin = () => {
     };
 
     const handleLogout = () => {
-        setIsAuth(false);
-        navigate("/");
+        setIsAuth(false);              
         localStorage.removeItem("isAuth");
-    };
+        localStorage.removeItem("role");
+        navigate("/login");             
+};
+
 
     return (
         <div className="container">

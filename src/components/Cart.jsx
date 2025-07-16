@@ -25,7 +25,7 @@ const Cart = ({ isOpen, onClose }) => {
                         <div className='cart-info'>
                             <p className='cart-nombre'>{item.nombre}</p>
                             <p className='cart-detalle'>
-                            ${item.precio.toFixed(2)} x {item.quantity} = ${(item.precio * item.quantity).toFixed(2)}
+                            ${Number(item.precio).toFixed(2)} x {item.quantity} = ${(Number(item.precio) * item.quantity).toFixed(2)}
                             </p>
                     </div>
                     <button onClick={() => handleDeleteFromCart(item)} className='deleteBtn'>
@@ -40,8 +40,8 @@ const Cart = ({ isOpen, onClose }) => {
             {cart.length > 0 && (
                 <div className='cart-footer'>
                 <p>Total: ${cart
-                    .reduce((acc, item) => acc + item.precio * item.quantity, 0)
-                    .toFixed(2)}
+                .reduce((acc, item) => acc + Number(item.precio) * item.quantity, 0)
+                .toFixed(2)}
                 </p>
                 <button className='pagarBtn'>Pagar</button>
                 </div>

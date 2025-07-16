@@ -40,3 +40,7 @@
 .read-the-docs {
   color: #888;
 } */
+.link.active {
+  color: #007bf1;
+  font-weight: bold;
+}
