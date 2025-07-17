@@ -3,102 +3,24 @@ import FormularioProducto from "../components/FormularioProducto";
 import FormularioEdicion from "../components/FormularioEdicion";
 import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
+import { AdminContext } from "../context/AdminContext";
 
 const Admin = () => {
     const { setIsAuth } = useContext(CartContext);
+
+    const { productos,
+            loading,
+            open,
+            setOpen,
+            openEditor,
+            setOpenEditor,
+            seleccionado,
+            setSeleccionado,
+            agregarProducto,
+            actualizarProducto,
+            eliminarProducto,} = useContext(AdminContext)
+
     const navigate = useNavigate();
-
-    const [productos, setProductos] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [open, setOpen] = useState(false);
-    const [seleccionado, setSeleccionado] = useState(null);
-    const [openEditor, setOpenEditor] = useState(false);
-
-    const apiUrl = "https://68279db46b7628c52910f173.mockapi.io/productos";
-
-    useEffect(() => {
-        fetch(apiUrl)
-            .then((res) => res.json())
-            .then((data) => {
-                setTimeout(() => {
-                    setProductos(data);
-                    setLoading(false);
-                }, 2000);
-            })
-            .catch((error) => {
-                console.error("Error al cargar productos:", error);
-                setLoading(false);
-            });
-    }, []);
-
-    const cargarProductos = async () => {
-        try {
-            const res = await fetch(apiUrl);
-            const data = await res.json();
-            setProductos(data);
-        } catch (error) {
-            console.log("Error al cargar productos", error);
-        }
-    };
-
-    const agregarProducto = async (producto) => {
-        try {
-            const res = await fetch(apiUrl, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(producto),
-            });
-            if (!res.ok) throw new Error("Error al agregar producto");
-            await res.json();
-            alert("Producto agregado correctamente");
-            cargarProductos();
-            setOpen(false);
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
-
-    const actualizarProducto = async (producto) => {
-        try {
-            const res = await fetch(`${apiUrl}/${producto.id}`, {
-                method: "PUT",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(producto),
-            });
-            if (!res.ok) throw new Error("Error al actualizar producto");
-            await res.json();
-            alert("Producto actualizado correctamente");
-            setOpenEditor(false);
-            setSeleccionado(null);
-            cargarProductos();
-        } catch (error) {
-            console.log(error.message);
-        }
-    };
-
-    const eliminarProducto = async (id) => {
-        const confirmar = window.confirm("¿Estás seguro de eliminar el producto?");
-        if (!confirmar) return;
-
-        try {
-            const res = await fetch(`${apiUrl}/${id}`, {
-                method: "DELETE",
-            });
-            if (!res.ok) throw new Error("Error al eliminar");
-            alert("Producto eliminado correctamente");
-            cargarProductos();
-        } catch (error) {
-            alert("Hubo un problema al eliminar el producto");
-        }
-    };
-
-    const handleLogout = () => {
-        setIsAuth(false);              
-        localStorage.removeItem("isAuth");
-        localStorage.removeItem("role");
-        navigate("/login");             
-};
-
 
     return (
         <div className="container">
@@ -109,7 +31,11 @@ const Admin = () => {
                     <nav>
                         <ul className="nav">
                             <li className="navItem">
-                                <button className="navButton" onClick={handleLogout}>
+                                <button className="navButton" onClick={() => {
+                                    setIsAuth(false);
+                                    navigate('/');
+                                    localStorage.removeItem('isAuth');
+                                }}>
                                     <i className="fa-solid fa-right-from-bracket"></i>
                                 </button>
                             </li>
